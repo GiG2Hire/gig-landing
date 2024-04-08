@@ -63,14 +63,14 @@ p{
 }
 ul{
     font-family: var(--content);
+    list-style: none outside;
+    font-size: 1rem;
 }
 main{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 64px;
     margin: 24px 10%;
-    align-items: center;
-    justify-items: center;
     border-style: solid;
 }
 section{
@@ -79,9 +79,6 @@ section{
     align-items: center;
     gap: 24px;
     margin: 0;
-}
-ul{
-    list-style-type: none;
 }
 .check::before{
     content: url(assets/check-green.svg);
@@ -166,13 +163,10 @@ header{
     flex-direction: row;
     gap: 48px;
 }
-.titles{
-    width: 50%;
+#titles{
     display: inline-flex;
     flex-direction: column;
-    gap: 24px;
     justify-content: space-between;
-    height: 100%;
     align-items: flex-start;
 }
 .live{
@@ -269,9 +263,15 @@ header{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 }
 .join h3{
     color: var(--navybold);
+}
+.join-btns{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 16px;
 }
 .btn-green{
     font-size: 1.2rem;
@@ -291,10 +291,10 @@ header{
     cursor: pointer;
 }
 .chat{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 50%;
+    width: 450px;
 }
 .male{
     z-index: 2;
@@ -302,15 +302,18 @@ header{
     flex-direction: row;
     flex-wrap: nowrap;
 }
+.male img{
+    height: 300px;
+}
 .chatbox-green{
     background-color: var(--yellow-40a);
     padding: 6px;
     font-family: var(--content);
     font-size: 0.8rem;
-    width: 230px;
-    margin-left: -48px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 200px;
+    height: fit-content;
+    margin-left: -50px;
+    display: inline-flex;
     flex-direction: column;
     gap: 8px;
     backdrop-filter: blur(10px);
@@ -369,36 +372,45 @@ header{
     flex-direction: row;
     margin-top: -46px;
 }
+.female img{
+    height: 300px;
+}
 .chatbox-navy{
     background-color: var(--navy-40a);
     padding: 6px;
     font-family: var(--content);
     font-size: 0.8rem;
-    width: 230px;
-    margin-right: -48px;
+    width: 200px;
+    margin-right: -50px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    backdrop-filter: blur(10px);  
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    justify-content: end;
 }
 /***** ABOUT DESKTOP *****/
 .details{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     gap: 24px;
+    width: 100%;
 }
 .detailbox{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
 }
 .icon{
-    display: flex;
     width: 100px;
     height: 100px;
     background-color: var(--navy-40a);
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
     margin-left: 24px;
-    align-content: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 .det-content{
     margin-top: -50px;
@@ -409,11 +421,14 @@ header{
     border-width: 4px;
     padding: 60px 24px 24px;
     color: var(--navy300);
+    height: 80px;
 }
 .how-to{
     display: flex;
     flex-direction: row;
     gap: 24px;
+    width: 100%;
+    color: var(--navy300);
 }
 .how-user{
     background-color: var(--yellow-10a);
@@ -421,62 +436,150 @@ header{
     flex-direction: column;
     gap: 48px;
     padding: 32px;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 }
 .how-user li{
     margin-bottom: 16px;
+}
+.how-user h4{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 .how h2{
     text-align: center;
 }
 /***** ROADMAP DESKTOP *****/
+.twentyfour{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.twentyfive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.year{
+    margin-bottom: 24px;
+}
+.q-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
 .timeline{
     width: 100%;
     height: 10px;
     background-color: var(--navy);
 }
 .progress{
-    width: 300px;
-    height: 10px;
+    width: 33%;
+    height: 100%;
     background-color: var(--yellow);
 }
 .quarters{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     gap: 24px;
+    justify-content: space-between;
 }
 .q-content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 16px;
+    width: 100%;
+    color: var(--navy300);
 }
 .q-content li{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 .q-check{
+    display: flex;
     height: 70px;
     width: 70px;
-    text-align: center;
     background-color: var(--yellow);
     color: var(--navy);
+    justify-content: center;
+    align-items: center;
 }
 .q-pending{
+    display: flex;
     height: 70px;
     width: 70px;
     text-align: center;
     background-color: var(--navy);
     color: var(--yellow);
+    justify-content: center;
+    align-items: center;
 }
 
 /***** TEAM DESKTOP *****/
+#team{
+    color: var(--navy);
+}
 .teammembers{
     display: flex;
     flex-direction: row;
     gap: 24px;
+    width: 100%;
 }
-
-
+.member{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: var(--yellow);
+}
+.photo{
+    position: relative;
+    height: 300px;
+    padding: 16px;
+}
+.david{
+    background-image: url(assets/david-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.chandra{
+    background-image: url(assets/chandra-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.camilo{
+    background-image: url(assets/camilo-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.linkedin{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.linkedin button{
+    height: 50px;
+    width: 50px;
+    background-color: var(--yellow);
+    border-style: none;
+}
+.linkedin button:hover{
+    border-style: solid;
+    border-width: 4px;
+    border-color: var(--navy);
+    cursor: pointer;
+}
+.name{
+    background-color: var(--yellow);
+    padding: 8px;
+    text-align: center;
+}
 /***** CONTACT DESKTOP *****/
 #contact{
     display: flex;
@@ -485,17 +588,40 @@ header{
     border-style: solid;
     border-color: var(--yellow);
     border-width: 4px;
-}
-.chatbubble{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--yellow);
+    color: var(--navy);
 }
 .contact-info{
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 32px;
+    padding: 24px;
+    width: 70%;
+}
+.contact-info h2{
+    text-align: left;
+}
+.mail{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.chatbubble{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--yellow);
+    width: 30%;
+    height: 260px;
+    padding: 24px;
+    justify-content: space-between;
+}
+.gig-icon{
+    display: flex;
+    justify-content: left;
+}
+.chat-icon{
+    display: flex;
+    justify-content: right;
 }
 /***** FOOTER DESKTOP *****/
 footer {
@@ -513,4 +639,210 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.social-btn{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-style: solid;
+    border-color: var(--yellow);
+    border-width: 2px;
+}
+.social-btn:hover{
+    cursor: pointer;
+    background-color: var(--yellow);
+}
+.social-btn:hover svg{
+    fill: var(--navy);
+}
+
+/***** MEDIUM *****/
+@media only screen and (max-width: 900px){
+    /***** GLOBAL MEDIUM *****/
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    main{
+        margin: 24px 2%;
+    }
+    /***** NAVBAR MEDIUM *****/
+    nav{
+        padding: 16px 2%;
+        width: 98%;
+    }
+    .about {
+        display: none;
+    }
+    /***** HERO MEDIUM *****/
+    header{
+        margin: 0px 2%;
+        gap: 32px;
+        padding: 16px;
+    }
+    .subtitles{
+        gap: 8px;
+    }
+    .subtitles h3{
+        font-size: 1.2rem;
+    }
+    .chat {
+        width: 400px;
+    }
+    .male img{
+        height: 250px;
+    }
+    .female img{
+        height: 250px;
+    }
+    .female{
+        margin-top: -80px;
+    }
+    .chatbox-green{
+        margin-left: -100px;
+    }
+    .chatbox-navy{
+        margin-right: -100px;
+    }
+}
+/***** SMALL *****/
+@media only screen and (max-width: 600px){
+    /***** GLOBAL SMALL *****/
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-family: var(--content);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    h4{
+        font-family: var(--content);
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    h5{
+        font-family: var(--titles);
+        font-size: 1rem;
+    }
+    h6{
+        font-family: var(--titles);
+        font-size: 2rem;
+    }
+    p{
+        font-family: var(--content);
+    }
+    ul{
+        font-size: 1rem;
+    }
+    main{
+        margin: 24px 2%;
+    }
+    /***** NAVBAR SMALL *****/
+    nav{
+        padding: 16px 2%;
+        width: 98%;
+    }
+    .txt-btn {
+        display: none;
+    }
+    /***** HERO SMALL *****/
+    header{
+        margin: 0px 2%;
+        gap: 32px;
+        padding: 16px;
+        flex-direction: column;
+    }
+    #titles{
+        gap: 32px;
+        align-items: center;
+    }
+    .subtitles{
+        gap: 8px;
+    }
+    .subtitles h3{
+        font-size: 1.2rem;
+    }
+    .join{
+        width: 100%;
+    }
+    .btn-blue{
+        width: 100%;
+    }
+    .btn-green{
+        width: 100%;
+    }
+    .chat {
+        width: 400px;
+        align-items: center;
+    }
+    .male img{
+        height: 250px;
+    }
+    .female img{
+        height: 250px;
+    }
+    .female{
+        margin-top: -80px;
+    }
+    .chatbox-green{
+        margin-left: -100px;
+    }
+    .chatbox-navy{
+        margin-right: -100px;
+    }
+    /***** ABOUT SMALL *****/
+    .det-content{
+        height: 200px;
+    }
+    .how-to{
+        flex-direction: column;
+    }
+    .how-user{
+        padding: 16px;
+    }
+    /***** ROADMAP *****/
+    .q-container{
+        flex-direction: row;
+    }
+    .timeline{
+        width: 10px;
+        height: 100%;
+    }
+    .quarters{
+        flex-direction: column;
+    }
+    /***** TEAM *****/
+
+    .teammembers{
+        flex-direction: column;
+        align-items: center;
+    }
+    .member{
+        width: 80%;
+    }
+    /***** CONTACT *****/
+    #contact{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-info{
+        padding: 16px;
+    }
+    .chatbubble{
+        width: 100%;
+    }
 }
