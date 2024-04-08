@@ -14,14 +14,16 @@
     --content: "Space Mono", monospace;
 }
 *{
+    transition: all 0.2s;
     margin: 0;
     padding: 0;
-    transition: all 0.2s;
 }
 html{
-    /*** scroll-padding-top: 60px; ***/
-    background-color: var(--light);
+    scroll-padding-top: 77px;
     box-sizing: border-box;
+}
+body{
+    background-color: var(--light);
     width: 100%;
 }
 a{
@@ -69,6 +71,7 @@ main{
     margin: 24px 10%;
     align-items: center;
     justify-items: center;
+    border-style: solid;
 }
 section{
     display: flex;
@@ -99,7 +102,6 @@ ul{
 }
 /***** NAVBAR DESKTOP *****/
 nav{
-    width: 100vw;
     z-index: 4;
     position: fixed;
     background-color: var(--yellow-10a);
@@ -108,10 +110,11 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 16px 5%;
-    gap: auto;
     backdrop-filter: blur(80px);
     font-family: var(--content);
     font-weight: 700;
+    margin: 0px;
+    width: 100%;
 }
 .menu{
     display: flex;
@@ -149,6 +152,7 @@ nav{
     border-inline-style: solid;
     border-color: var(--navy);
     border-width: 4px;
+    cursor: pointer;
 }
 .nav-spacer{
     width: 100%;
@@ -167,7 +171,7 @@ header{
     width: 50%;
     display: inline-flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 24px;
     justify-content: space-between;
     height: 100%;
     align-items: flex-start;
@@ -183,6 +187,7 @@ header{
     align-items: center;
     color: var(--green);
     width: 110px;
+    vertical-align: middle;
 }
 .circle{
     border-radius: 50%;
@@ -256,11 +261,9 @@ header{
     }
 }
 .subtitles{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     gap: 24px;
-}
-.subtitles{
     color: var(--blue);
 }
 .join{
@@ -268,7 +271,7 @@ header{
     flex-direction: column;
     gap: 16px;
 }
-.join{
+.join h3{
     color: var(--navybold);
 }
 .btn-green{
@@ -286,6 +289,7 @@ header{
     border-inline-style: solid;
     border-color: var(--yellow);
     border-width: 4px;
+    cursor: pointer;
 }
 .chat{
     display: inline-flex;
@@ -380,9 +384,6 @@ header{
     backdrop-filter: blur(10px);  
 }
 /***** ABOUT DESKTOP *****/
-#about {
-    border-style: solid;
-}
 .details{
     display: inline-flex;
     gap: 24px;
@@ -411,23 +412,103 @@ header{
     padding: 60px 24px 24px;
     color: var(--navy300);
 }
+.how-to{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.how-user{
+    background-color: var(--yellow-10a);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 32px;
+    align-items: center;
+}
+.how-user li{
+    margin-bottom: 16px;
+}
+.how h2{
+    text-align: center;
+}
+/***** ROADMAP DESKTOP *****/
+.timeline{
+    width: 100%;
+    height: 10px;
+    background-color: var(--navy);
+}
+.progress{
+    width: 300px;
+    height: 10px;
+    background-color: var(--yellow);
+}
+.quarters{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.q-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.q-content li{
+    margin-bottom: 8px;
+}
+.q-check{
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    background-color: var(--yellow);
+    color: var(--navy);
+}
+.q-pending{
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    background-color: var(--navy);
+    color: var(--yellow);
+}
+
+/***** TEAM DESKTOP *****/
+.teammembers{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
 
 
-
-
-
-
-
-
+/***** CONTACT DESKTOP *****/
+#contact{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--yellow-10a);
+    border-style: solid;
+    border-color: var(--yellow);
+    border-width: 4px;
+}
+.chatbubble{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--yellow);
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+}
+/***** FOOTER DESKTOP *****/
 footer {
     background-color: var(--blue);
     display: inline-flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 16px 5%;
     font-family: var(--content);
     color: var(--yellow);
+    margin: 0;
 }
 .logofooter{
     display: inline-flex;
