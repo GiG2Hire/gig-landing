@@ -18,12 +18,12 @@
     margin: 0;
     padding: 0;
 }
-html{
+html, body{
+    background-color: var(--light);
     scroll-padding-top: 77px;
     box-sizing: border-box;
-}
-body{
-    background-color: var(--light);
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 a{
@@ -79,7 +79,6 @@ section{
     align-items: center;
     gap: 24px;
     margin: 0;
-    width: max-content;
 }
 ul{
     list-style-type: none;
@@ -114,7 +113,7 @@ nav{
     font-family: var(--content);
     font-weight: 700;
     margin: 0px;
-    width: 100%;
+    width: 90%;
 }
 .menu{
     display: flex;
@@ -354,21 +353,20 @@ header{
 .msgstroke-green{
     border-style: solid;
     border-width: 2px;
-    border-color: var(--green);
+    border-color: var(--yellow);
     align-items: center;
     display: inline-flex;
     text-wrap: nowrap;
     padding: 4px 8px;
     gap: 4px;
     flex-wrap: wrap;
-    color: var(--green);
-    justify-content: flex-start;
+    color: var(--yellow);
+    justify-content: flex-end;
 }
 .female{
     z-index: 3;
     display: flex;
     flex-direction: row;
-    background-color: aqua;
     margin-top: -46px;
 }
 .chatbox-navy{
@@ -509,6 +507,7 @@ footer {
     font-family: var(--content);
     color: var(--yellow);
     margin: 0;
+    width: 90%;
 }
 .logofooter{
     display: inline-flex;
