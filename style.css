@@ -65,13 +65,13 @@ ul{
     font-family: var(--content);
     list-style: none outside;
     font-size: 1rem;
+    text-align: left;
 }
 main{
     display: flex;
     flex-direction: column;
     gap: 64px;
-    margin: 24px 10%;
-    border-style: solid;
+    padding: 24px 10%;
 }
 section{
     display: flex;
@@ -100,26 +100,27 @@ section{
 nav{
     z-index: 4;
     position: fixed;
+    display: inline-flex;
     background-color: var(--yellow-10a);
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 5%;
     backdrop-filter: blur(80px);
     font-family: var(--content);
     font-weight: 700;
     margin: 0px;
-    width: 90%;
+    padding: 0px;
+    width: 100%;
 }
 .menu{
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: center;
+    margin: 0px 2%;
 }
 .logotype{
     height: 45px;
+    margin: 16px 2%;
 }
 .txt-btn{
     font-size: 1rem;
@@ -168,6 +169,13 @@ header{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+}
+.subtitles{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--blue);
+    width: 100%;
 }
 .live{
     background-color: var(--blue);
@@ -253,12 +261,6 @@ header{
         background: var(--green);
     }
 }
-.subtitles{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    color: var(--blue);
-}
 .join{
     display: flex;
     flex-direction: column;
@@ -294,7 +296,6 @@ header{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 450px;
 }
 .male{
     z-index: 2;
@@ -427,7 +428,6 @@ header{
     display: flex;
     flex-direction: row;
     gap: 24px;
-    width: 100%;
     color: var(--navy300);
 }
 .how-user{
@@ -436,19 +436,11 @@ header{
     flex-direction: column;
     gap: 48px;
     padding: 32px;
-    align-items: flex-start;
-    width: 100%;
+    text-align: center;
+    justify-content: flex-start;
 }
 .how-user li{
     margin-bottom: 16px;
-}
-.how-user h4{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.how h2{
-    text-align: center;
 }
 /***** ROADMAP DESKTOP *****/
 .twentyfour{
@@ -611,9 +603,8 @@ header{
     flex-direction: column;
     background-color: var(--yellow);
     width: 30%;
-    height: 260px;
     padding: 24px;
-    justify-content: space-between;
+    margin: 0;
 }
 .gig-icon{
     display: flex;
@@ -629,21 +620,22 @@ footer {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 5%;
     font-family: var(--content);
     color: var(--yellow);
     margin: 0;
-    width: 90%;
+    width: 100%;
 }
 .logofooter{
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin: 16px 2%;
 }
 .socials{
     display: flex;
     flex-direction: row;
     gap: 8px;
+    margin: 0px 2%;
 }
 .social-btn{
     display: flex;
@@ -674,13 +666,9 @@ footer {
         font-size: 2rem;
     }
     main{
-        margin: 24px 2%;
+        padding: 24px 2%;
     }
     /***** NAVBAR MEDIUM *****/
-    nav{
-        padding: 16px 2%;
-        width: 98%;
-    }
     .about {
         display: none;
     }
@@ -695,9 +683,6 @@ footer {
     }
     .subtitles h3{
         font-size: 1.2rem;
-    }
-    .chat {
-        width: 400px;
     }
     .male img{
         height: 250px;
@@ -748,14 +733,7 @@ footer {
     ul{
         font-size: 1rem;
     }
-    main{
-        margin: 24px 2%;
-    }
     /***** NAVBAR SMALL *****/
-    nav{
-        padding: 16px 2%;
-        width: 98%;
-    }
     .txt-btn {
         display: none;
     }
@@ -814,7 +792,7 @@ footer {
     .how-user{
         padding: 16px;
     }
-    /***** ROADMAP *****/
+    /***** ROADMAP SMALL *****/
     .q-container{
         flex-direction: row;
     }
@@ -825,7 +803,7 @@ footer {
     .quarters{
         flex-direction: column;
     }
-    /***** TEAM *****/
+    /***** TEAM SMALL *****/
 
     .teammembers{
         flex-direction: column;
@@ -834,15 +812,17 @@ footer {
     .member{
         width: 80%;
     }
-    /***** CONTACT *****/
+    /***** CONTACT SMALL *****/
     #contact{
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
     .contact-info{
         padding: 16px;
     }
     .chatbubble{
-        width: 100%;
+        padding: 16px;
+        width: fit-content;
     }
 }
