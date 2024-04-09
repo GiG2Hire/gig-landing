@@ -406,6 +406,7 @@ header{
     width: 100%; 
 }
 .icon{
+    z-index: 3;
     width: 100px;
     height: 100px;
     background-color: var(--navy-40a);
