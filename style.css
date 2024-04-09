@@ -105,6 +105,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     font-family: var(--content);
     font-weight: 700;
     margin: 0px;
@@ -318,6 +319,7 @@ header{
     flex-direction: column;
     gap: 8px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .msg-green{
     background-color: var(--yellow);
@@ -387,6 +389,7 @@ header{
     flex-direction: column;
     gap: 8px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     height: fit-content;
     justify-content: end;
 }
@@ -429,6 +432,7 @@ header{
     flex-direction: row;
     gap: 24px;
     color: var(--navy300);
+    flex-grow: 1;
 }
 .how-user{
     background-color: var(--yellow-10a);
@@ -438,6 +442,7 @@ header{
     padding: 32px;
     text-align: center;
     justify-content: flex-start;
+    flex: 1;
 }
 .how-user li{
     margin-bottom: 16px;
@@ -590,7 +595,7 @@ header{
     flex-direction: column;
     gap: 16px;
     padding: 24px;
-    width: 70%;
+    flex: 2;
 }
 .contact-info h2{
     text-align: left;
@@ -608,10 +613,11 @@ header{
     display: flex;
     flex-direction: column;
     background-color: var(--yellow);
-    width: 30%;
     padding: 24px;
     margin: 0;
     height: 100%;
+    flex: 1;
+    gap: 40px;
 }
 .gig-icon{
     display: flex;
@@ -811,12 +817,11 @@ footer {
         align-items: flex-start;
     }
     .contact-info{
-        width: 100%;
         padding: 16px;
+        flex: 1;
     }
     .chatbubble{
-        padding: 16px;
-        width: 100%;
+        display: none;
     }
     .mail img{
         height: 24px;
