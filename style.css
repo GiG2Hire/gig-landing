@@ -111,8 +111,8 @@ nav{
     background-color: var(--yellow-10a);
     align-items: center;
     justify-content: space-between;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
     font-family: var(--content);
     font-weight: 700;
     margin: 0px;
