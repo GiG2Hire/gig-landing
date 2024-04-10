@@ -57,7 +57,7 @@ h6{
 p{
     font-family: var(--content);
 }
-ul{
+ol{
     font-family: var(--content);
     list-style: none outside;
     font-size: 1rem;
