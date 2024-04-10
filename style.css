@@ -28,7 +28,7 @@ a{
 h1{
     font-family: var(--titles);
     color: var(--navy);
-    font-size: 6rem;
+    font-size: 5rem;
 }
 h2{
     font-family: var(--titles);
@@ -68,7 +68,7 @@ main{
     flex-direction: column;
     gap: 64px;
     padding: 0;
-    margin: 24px 10%;
+    margin: 24px 15%;
     vertical-align: middle;
     justify-content: space-around;
 }
@@ -143,7 +143,8 @@ nav{
 }
 .btn-blue{
     font-size: 1.2rem;
-    padding: 8px 16px;
+    height: 50px;
+    width: 160px;
     background-color: var(--navy);
     color: var(--yellow);
     text-align: center;
@@ -205,6 +206,18 @@ header{
     -ms-animation: blink 1s infinite;
     animation: blink 1s infinite;
 }
+@keyframes blink {
+    0% {
+        background-color: var(--green);
+        }
+    50% {
+        background-color: var(--yellow);
+        box-shadow: 0px 0px 10px var(--green);
+    }
+    0% {
+        background: var(--green);
+    }
+}
 @-webkit-keyframes blink {
     0% {
         background-color: var(--green);
@@ -253,18 +266,6 @@ header{
         background: var(--green);
     }
 }
-@keyframes blink {
-    0% {
-        background-color: var(--green);
-        }
-    50% {
-        background-color: var(--yellow);
-        box-shadow: 0px 0px 10px var(--green);
-    }
-    0% {
-        background: var(--green);
-    }
-}
 .join{
     display: flex;
     flex-direction: column;
@@ -273,6 +274,92 @@ header{
 }
 .join h3{
     color: var(--navybold);
+    animation: 2s lineup ease-out 2;
+}
+@keyframes lineup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-webkit-keyframes lineup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-moz-keyframes lineup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-o-keyframes lineup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-ms-keyframes lineup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
 }
 .join-btns{
     display: inline-flex;
@@ -281,7 +368,8 @@ header{
 }
 .btn-green{
     font-size: 1.2rem;
-    padding: 8px 40px;
+    height: 50px;
+    width: 160px;
     background-color: var(--yellow);
     color: var(--navy);
     text-align: center;
@@ -691,7 +779,7 @@ footer {
         font-size: 2rem;
     }
     main{
-        padding: 24px 2%;
+        margin: 24px 5%;
     }
     /***** NAVBAR MEDIUM *****/
     .about {
