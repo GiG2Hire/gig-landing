@@ -84,7 +84,7 @@
         <main>
             <!-- ABOUT -->
             <article id="about">
-                <h2>Talent speaks louder than words</h2>
+                <h2 itemprop="name">Talent speaks louder than words</h2>
                 <section class="details">
                     <div class="detailbox">
                         <div class="icon"><img src="assets/freelance-blue.svg" alt="Freelance" style="height: 80px;"></div>
@@ -119,35 +119,40 @@
                 </section>
             </article>
             <article id="how" itemscope itemtype="https://schema.org/HowTo">
-                <h2>How to start a GIG</h2>
+                <h2 itemprop="name">How to start a GIG</h2>
                 <section class="how-to">
                     <div class="how-user">
-                        <h4 itemprop="name">Freelance</h4>
-                        <ol itemprop="step" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
+                        <h4 itemprop="name">Freelance</h4>   
+                        <ol itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
+                            <h5 itemprop="name">Start your GiG journey</h5>
                             <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Sign with your GitHub account.</span></li>
                             <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Explore Jobs Marketplace</span></li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Apply for jobs.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Get accepted and chat with your client.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Deliver your job.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Get paid.</li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Apply for jobs.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Get accepted and chat with your client.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Deliver your job.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Get paid!</span></li>
                         </ol>
                     </div>
                     <div class="how-user">
                         <h4 itemprop="name">Client</h4>
-                        <ol itemprop="step">
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Sign in.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Post a job.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Escrow your payment.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Choose freelance and chat with him.</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Get your job delivered</li>
-                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">Payment after succesful deliver.</li>
+                        <ol itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
+                            <h5 itemprop="name">Hire professionals</h5>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Sign In.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Post a job.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Escrow your payment.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Choose freelance and start chatting.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Get your job delivered.</span></li>
+                            <li class="check" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep"><span itemprop="text">Automatic payment after succesful job completed!</span></li>
                         </ol>
                     </div>
                 </section>
             </article>
             <!-- ROADMAP -->
-            <article id="roadmap">  
-                <h2>RoadMap</h2>
+            <article id="roadmap" itemscope itemtype="https://schema.org/Event">  
+                <h2 itemprop="name">RoadMap</h2>
+                <meta itemprop="startDate" content="2024-01-01">
+                <meta itemprop="endDate" content="2025-12-31">
+                <meta itemprop="location" content="GiG2Hire remote HQ">
                 <section class="twentyfour">
                     <time datetime="2024"><h1 class="year">2024</h1></time>
                     <div class="q-container">
@@ -155,37 +160,49 @@
                             <div class="progress"></div>
                         </div>
                         <div class="quarters">
-                            <div class="q-content">
-                                <div class="q-check"><h6>Q1</h6></div>
-                                <ul>
-                                    <li class="check">Proof of technology.</li>
-                                    <li class="check">Idea validation.</li>
-                                    <li class="check">Proof of Concept v1.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2024-01-01">
+                                <meta itemprop="endDate" content="2024-03-31">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-check" itemprop="name">Q1</h6>
+                                <ol>
+                                    <li class="check" itemprop="description">Proof of technology.</li>
+                                    <li class="check" itemprop="description">Idea validation.</li>
+                                    <li class="check" itemprop="description">Proof of Concept v1.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-check">Q2</h6>
-                                <ul>
-                                    <li class="check">Landing page redesign.</li>
-                                    <li class="wait">Early bird interest.</li>
-                                    <li class="wait">Yellow paper release.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2024-04-01">
+                                <meta itemprop="endDate" content="2024-06-30">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-check" itemprop="name">Q2</h6>
+                                <ol>
+                                    <li class="check" itemprop="description">Landing page redesign.</li>
+                                    <li class="wait" itemprop="description">Early bird interest.</li>
+                                    <li class="wait" itemprop="description">Yellow paper release.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-pending">Q3</h6>
-                                <ul>
-                                    <li class="wait">Closed Beta release.</li>
-                                    <li class="wait">White paper release.</li>
-                                    <li class="wait">Security audit.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2024-07-01">
+                                <meta itemprop="endDate" content="2024-09-30">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q3</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">Closed Beta release.</li>
+                                    <li class="wait" itemprop="description">White paper release.</li>
+                                    <li class="wait" itemprop="description">Security audit.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-pending">Q4</h6>
-                                <ul>
-                                    <li class="wait">AI job reviewer.</li>
-                                    <li class="wait">Open Beta release.</li>
-                                    <li class="wait">Educational institutions engagement.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2024-10-01">
+                                <meta itemprop="endDate" content="2024-12-31">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q4</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">AI job reviewer.</li>
+                                    <li class="wait" itemprop="description">Open Beta release.</li>
+                                    <li class="wait" itemprop="description">Educational institutions engagement.</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -197,37 +214,49 @@
                             <!-- <span class="progress"></span> -->
                         </div>
                         <div class="quarters">
-                            <div class="q-content">
-                                <h6 class="q-pending">Q1</h6>
-                                <ul>
-                                    <li class="wait">Partnerships with top freelance employers.</li>
-                                    <li class="wait">First 10,000 users onboard.</li>
-                                    <li class="wait">Work gamified release.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2025-01-01">
+                                <meta itemprop="endDate" content="2025-03-31">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q1</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">Partnerships with top freelance employers.</li>
+                                    <li class="wait" itemprop="description">First 10,000 users onboard.</li>
+                                    <li class="wait" itemprop="description">Work gamified release.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-pending">Q2</h6>
-                                <ul>
-                                    <li class="wait">Partnerships with topfreelance employers.</li>
-                                    <li class="wait">AI work companion.</li>
-                                    <li class="wait">Tokenomics release.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2025-04-01">
+                                <meta itemprop="endDate" content="2025-06-30">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q2</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">Partnerships with topfreelance employers.</li>
+                                    <li class="wait" itemprop="description">AI work companion.</li>
+                                    <li class="wait" itemprop="description">Tokenomics release.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-pending">Q3</h6>
-                                <ul>
-                                    <li class="wait">Mobile version.</li>
-                                    <li class="wait">Partnerships with tech companies.</li>
-                                    <li class="wait">GIG2Hire v2 release.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2025-07-01">
+                                <meta itemprop="endDate" content="2025-09-30">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q3</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">Mobile version.</li>
+                                    <li class="wait" itemprop="description">Partnerships with tech companies.</li>
+                                    <li class="wait" itemprop="description">GIG2Hire v2 release.</li>
+                                </ol>
                             </div>
-                            <div class="q-content">
-                                <h6 class="q-pending">Q4</h6>
-                                <ul>
-                                    <li class="wait">First 50,000 users onboard.</li>
-                                    <li class="wait">G-Learn release.</li>
-                                    <li class="wait">Top-G funds release.</li>
-                                </ul>
+                            <div class="q-content" itemprop="subEvent" itemscope itemtype="https://schema.org/Event">
+                                <meta itemprop="startDate" content="2025-10-01">
+                                <meta itemprop="endDate" content="2025-12-31">
+                                <meta itemprop="location" content="GiG2Hire dApp">
+                                <h6 class="q-pending" itemprop="name">Q4</h6>
+                                <ol>
+                                    <li class="wait" itemprop="description">First 50,000 users onboard.</li>
+                                    <li class="wait" itemprop="description">G-Learn release.</li>
+                                    <li class="wait" itemprop="description">Top-G funds release.</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
