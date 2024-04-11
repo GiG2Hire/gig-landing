@@ -66,26 +66,8 @@ ol{
 main{
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 24px;
     padding: 0;
-    margin: 24px 15%;
-    vertical-align: middle;
-    justify-content: space-around;
-}
-article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    margin: 0;
-    vertical-align: middle;
-    justify-content: center;
-}
-section{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin: 0;
 }
 .check::before{
     content: url(assets/check-green.svg);
@@ -495,11 +477,14 @@ header{
     display: flex;
     flex-direction: row;
     gap: 24px;
+    margin: 24px 10%;
+    align-items: center;
 }
 .ab-titles{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex: 2;
 }
 .ab-titles h4{
     color: var(--blue);
@@ -508,14 +493,14 @@ header{
     text-align: left;
 }
 .details{
-    justify-content: space-evenly;
+    display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
+    gap: 24px;
 }
 .detailbox{
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 .icon-box{
     z-index: 3;
@@ -543,11 +528,17 @@ header{
     border-style: solid;
     border-color: var(--yellow);
     border-width: 4px;
-    padding: 60px 16px 16px;
+    padding: 52px 12px 12px;
     color: var(--navy300);
-    height: 120px;
+    height: 150px;
 }
 /***** HOW TO *****/
+#how{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 10%;
+}
 .how-to{
     display: flex;
     flex-direction: row;
@@ -576,7 +567,24 @@ header{
     width: max-content;
     margin-bottom: 24px;
 }
+/***** NO FEES *****/
+#nofees{
+    background-color: var(--navy);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 10%;
+}
+#nofees h2{
+    color: var(--yellow);
+}
 /***** ROADMAP DESKTOP *****/
+#roadmap{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 10%;
+}
 .twentyfour{
     display: flex;
     flex-direction: column;
@@ -645,6 +653,10 @@ header{
 
 /***** TEAM DESKTOP *****/
 #team{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 10%;
     color: var(--navy);
 }
 .team-desc{
@@ -718,6 +730,7 @@ header{
     border-color: var(--yellow);
     border-width: 4px;
     color: var(--navy);
+    margin: 24px 10%;
     align-items: center;
 }
 .contact-info{
@@ -807,9 +820,6 @@ footer {
     }
     h2{
         font-size: 2rem;
-    }
-    main{
-        margin: 24px 5%;
     }
     /***** NAVBAR MEDIUM *****/
     .about {
@@ -908,6 +918,14 @@ footer {
         margin-right: -100px;
     }
     /***** ABOUT SMALL *****/
+    #about{
+        margin: 12px 5%;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .ab-titles h4{
+        font-size: 1.2rem;
+    }
     .icon-box{
         margin-left: 16px;
         height: 80px;
@@ -926,7 +944,14 @@ footer {
         padding: 16px;
         gap: 20px;
     }
+    /***** HOW TO *****/
+    #how{
+        margin: 12px 5%;
+    }
     /***** ROADMAP SMALL *****/
+    #roadmap{
+        margin: 12px 5%;
+    }
     .q-container{
         flex-direction: row;
     }
@@ -953,7 +978,9 @@ footer {
         width: 60px;
     }
     /***** TEAM SMALL *****/
-
+    #team{
+        margin: 12px 5%;
+    }
     .teammembers{
         flex-direction: column;
         align-items: center;
@@ -965,6 +992,7 @@ footer {
     #contact{
         flex-direction: column;
         align-items: flex-start;
+        margin: 12px 5%;
     }
     .contact-info{
         padding: 12px;
@@ -973,7 +1001,7 @@ footer {
         display: none;
     }
     .mail img{
-        height: 24px;
+        height: 20px;
     }
     .mail h4{
         font-size: 1.5rem;
