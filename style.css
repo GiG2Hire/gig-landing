@@ -259,11 +259,11 @@ header{
 }
 .join h3{
     color: var(--navybold);
-    animation: 2s lineup ease-out 2;
-    -webkit-animation: 2s lineup ease-out 2;
-    -moz-animation: 2s lineup ease-out 2;
-    -o-animation: 2s lineup ease-out 2;
-    -ms-animation: 2s lineup ease-out 2;
+    animation: 2s lineup ease-out 3;
+    -webkit-animation: 2s lineup ease-out 3;
+    -moz-animation: 2s lineup ease-out 3;
+    -o-animation: 2s lineup ease-out 3;
+    -ms-animation: 2s lineup ease-out 3;
 }
 @keyframes lineup {
     0% {
@@ -485,6 +485,8 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     flex: 2;
+    text-align: left;
+    width: 100%;
 }
 .ab-titles h4{
     color: var(--blue);
@@ -501,6 +503,7 @@ header{
 .detailbox{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .icon-box{
     z-index: 3;
@@ -530,7 +533,7 @@ header{
     border-width: 4px;
     padding: 52px 12px 12px;
     color: var(--navy300);
-    height: 150px;
+    height: 160px;
 }
 /***** HOW TO *****/
 #how{
@@ -659,6 +662,9 @@ header{
     margin: 24px 10%;
     color: var(--navy);
 }
+#team h6{
+    font-size: 1.2rem;
+}
 .team-desc{
     text-align: center;
 }
@@ -678,7 +684,7 @@ header{
 }
 .photo{
     position: relative;
-    height: 300px;
+    height: 250px;
     padding: 16px;
 }
 .david{
@@ -699,10 +705,16 @@ header{
     background-size: cover;
     background-position: center;
 }
+.pratham{
+    background-image: url(assets/pratham-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .linkedin{
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 8px;
+    right: 8px;
 }
 .linkedin button{
     height: 50px;
@@ -717,6 +729,8 @@ header{
     cursor: pointer;
 }
 .name{
+    display: flex;
+    flex-direction: column;
     background-color: var(--yellow);
     padding: 8px;
     text-align: center;
@@ -813,7 +827,7 @@ footer {
 }
 
 /***** MEDIUM *****/
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1024px){
     /***** GLOBAL MEDIUM *****/
     h1{
         font-size: 3rem;
@@ -855,9 +869,32 @@ footer {
     /***** ABOUT MEDIUM *****/
     #about{
         flex-direction: column;
+        margin: 24px 5%;
     }
     .details{
         flex-direction: row;
+    }
+    .det-content{
+        height: 100px;
+    }
+    /***** HOW TO MEDIUM ****/
+    #how{
+        margin: 24px 5%;
+    }
+    /***** ROADMAP MEDIUM *****/
+    #roadmap{
+        margin: 24px 5%;
+    }
+    /***** TEAM MEDIUM *****/
+    #team{
+        margin: 24px 5%;
+    }
+    /***** CONTACT MEDIUM *****/
+    #contact{
+        margin: 24px 5%;
+    }
+    .chatbubble{
+        display: none;
     }
 }
 /***** SMALL *****/
@@ -944,7 +981,7 @@ footer {
         padding: 16px;
         gap: 20px;
     }
-    /***** HOW TO *****/
+    /***** HOW TO SMALL*****/
     #how{
         margin: 12px 5%;
     }
