@@ -28,7 +28,7 @@ a{
 h1{
     font-family: var(--titles);
     color: var(--navy);
-    font-size: 5rem;
+    font-size: 4rem;
 }
 h2{
     font-family: var(--titles);
@@ -182,9 +182,11 @@ header{
 .subtitles{
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    color: var(--blue);
+    gap: 16px;
     width: 100%;
+}
+.subtitles h3{
+    color: var(--blue);
 }
 .live{
     background-color: var(--blue);
@@ -408,6 +410,7 @@ header{
     width: 200px;
     height: fit-content;
     margin-left: -50px;
+    margin-top: 16px;
     display: inline-flex;
     flex-direction: column;
     gap: 8px;
@@ -466,7 +469,7 @@ header{
     z-index: 3;
     display: flex;
     flex-direction: row;
-    margin-top: -46px;
+    margin-top: -100px;
 }
 .female img{
     height: 300px;
@@ -478,6 +481,7 @@ header{
     font-size: 0.8rem;
     width: 200px;
     margin-right: -50px;
+    margin-top: 64px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -487,12 +491,30 @@ header{
     justify-content: end;
 }
 /***** ABOUT DESKTOP *****/
-.details{
+#about{
     display: flex;
     flex-direction: row;
     gap: 24px;
 }
+.ab-titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ab-titles h4{
+    color: var(--blue);
+}
+.ab-titles h2{
+    text-align: left;
+}
+.details{
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-grow: 1;
+}
 .detailbox{
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 .icon-box{
@@ -512,16 +534,20 @@ header{
     height: 80px;
 }
 .det-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin-top: -50px;
     font-family: var(--content);
     background-color: var(--yellow-40a);
     border-style: solid;
     border-color: var(--yellow);
     border-width: 4px;
-    padding: 60px 24px 24px;
+    padding: 60px 16px 16px;
     color: var(--navy300);
-    height: 80px;
+    height: 120px;
 }
+/***** HOW TO *****/
 .how-to{
     display: flex;
     flex-direction: row;
@@ -816,6 +842,13 @@ footer {
     .chatbox-navy{
         margin-right: -100px;
     }
+    /***** ABOUT MEDIUM *****/
+    #about{
+        flex-direction: column;
+    }
+    .details{
+        flex-direction: row;
+    }
 }
 /***** SMALL *****/
 @media only screen and (max-width: 600px){
@@ -844,6 +877,7 @@ footer {
         gap: 32px;
         padding: 16px;
         flex-direction: column;
+        align-items: center;
     }
     #titles{
         gap: 32px;
@@ -884,9 +918,6 @@ footer {
     }
     .details{
         flex-direction: column;
-    }
-    .det-content{
-        padding: 60px 16px 16px 16px;
     }
     .how-to{
         flex-direction: column;
