@@ -259,11 +259,11 @@ header{
 }
 .join h3{
     color: var(--navybold);
-    animation: 2s lineup ease-out 3;
-    -webkit-animation: 2s lineup ease-out 3;
-    -moz-animation: 2s lineup ease-out 3;
-    -o-animation: 2s lineup ease-out 3;
-    -ms-animation: 2s lineup ease-out 3;
+    animation: 2s lineup ease-out 5;
+    -webkit-animation: 2s lineup ease-out 5;
+    -moz-animation: 2s lineup ease-out 5;
+    -o-animation: 2s lineup ease-out 5;
+    -ms-animation: 2s lineup ease-out 5;
 }
 @keyframes lineup {
     0% {
@@ -487,9 +487,11 @@ header{
     flex: 2;
     text-align: left;
     width: 100%;
+    gap: 16px;
 }
 .ab-titles h4{
     color: var(--blue);
+    width: fit-content;
 }
 .ab-titles h2{
     text-align: left;
@@ -574,12 +576,68 @@ header{
 #nofees{
     background-color: var(--navy);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 24px;
-    padding: 24px 10%;
+    padding: 32px 10%;
+    align-items: center;
 }
-#nofees h2{
+.fees-titles{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+.fees-titles h2,h4{ 
     color: var(--yellow);
+    text-align: left;
+}
+.fees-titles h4{
+    font-weight: 400;
+}
+.table{
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: auto;
+    flex: 2;
+}
+table{
+    border-collapse: collapse;
+    font-family: var(--content);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+th{
+    padding: 16px;
+}
+.xs{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: -8px;
+}
+th img{
+    display: flex;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    height: 32px;
+}
+.gig{
+    background-color: var(--yellow-10a);
+    color: var(--yellow);
+    font-weight: bold;
+}
+.gig img{
+    height: 42px;
+}
+td {
+    text-align: center;
+    color: var(--light);
+    height: 80px;
+    padding: 0px 24px;
+}
+.row-title{
+    text-align: left;
+    padding: 0px 24px 0px 0px;
 }
 /***** ROADMAP DESKTOP *****/
 #roadmap{
@@ -766,6 +824,9 @@ header{
 .mail img{
     height: 32px;
 }
+.mail h4{
+    color: var(--navy);
+}
 .chatbubble{
     display: flex;
     flex-direction: column;
@@ -871,6 +932,12 @@ footer {
         flex-direction: column;
         margin: 24px 5%;
     }
+    .ab-titles{
+        gap: 8px;
+    }
+    .ab-titles h4{
+        font-size: 1.5rem;
+    }
     .details{
         flex-direction: row;
     }
@@ -880,6 +947,13 @@ footer {
     /***** HOW TO MEDIUM ****/
     #how{
         margin: 24px 5%;
+    }
+    /***** NO FEES *****/
+    #nofees{
+        flex-direction: column;
+    }
+    .fees-titles h4{
+        font-size: 1.5rem;
     }
     /***** ROADMAP MEDIUM *****/
     #roadmap{
@@ -980,6 +1054,43 @@ footer {
     .how-user{
         padding: 16px;
         gap: 20px;
+    }
+    /***** NOFEES SMALL ****/
+    #nofees{
+        padding: 24px 5%;
+        justify-content: flex-start;
+    }
+    .fees-titles{
+        font-size: 1.2rem;
+    }
+    .table{
+        justify-content: left;
+    }
+    .row-title{
+        padding: 0px 8px 0px 0px;
+    }
+    th img{
+        height: 16px;
+    }
+    .gig img{
+        height: 30px;
+    }
+    .row {
+        width: 100%;
+    }
+    th{
+        padding: 8px 4px;
+    }
+    td{
+        padding: 0px 8px;
+        height: 48px;
+    }
+    table{
+        font-size: 0.8rem;
+    }
+    .xs{
+        font-size: 0.4rem;
+        margin-top: 0px;
     }
     /***** HOW TO SMALL*****/
     #how{
